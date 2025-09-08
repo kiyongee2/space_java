@@ -1,0 +1,11 @@
+package classes;
+
+public class Student {
+	//멤버 변수
+	int studentId; //학번
+	String name;   //이름
+	int grade;     //학년
+	
+	//기본 생성자 - 컴파일러가 자동 생성해줌
+	//Student(){}
+}

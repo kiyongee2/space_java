@@ -1,0 +1,17 @@
+package classes;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		//클래스 인스턴스     생성자
+		Student st1 = new Student();
+		
+		//값 입력
+		st1.studentId = 1001;
+		
+		//출력
+		System.out.println("학번: " + st1.studentId);
+
+	}
+
+}
