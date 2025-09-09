@@ -1,0 +1,31 @@
+package classes2;
+
+/*
+   java lang 패키지는 import 하지 않음
+   - Math 클래스 : 수학 관련 메서드를 가지고 있음
+*/
+
+public class MathTest {
+
+	public static void main(String[] args) {
+		// Math 클래스의 메서드 사용
+		// static이 있는 메서드는 new 하지 않고, 클래스이름으로 직접 접근
+		//절대값 계산 - abs(정수)
+		int v1 = Math.abs(-4);
+		System.out.println(v1);  //4
+		
+		//반올림 - round(실수)
+		long v2 = Math.round(5.6);
+		System.out.println(v2);  //6
+		
+		//올림 - ceil()
+		double v3 = Math.ceil(4.1);
+		System.out.println(v3); //5.0
+		
+		//버림 - floor(실수)
+		double v4 = Math.floor(5.9);
+		System.out.println(v4); //5.0
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package classes2;
+
+public class MyMath {
+	
+	//public MyMath() {}
+	
+	//절대값 계산 메서드 정의
+	public int abs(int x) {
+		return (x < 0) ? -x : x;
+	}
+}

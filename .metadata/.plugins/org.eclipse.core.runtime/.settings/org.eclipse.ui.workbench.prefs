@@ -25,6 +25,6 @@ org.eclipse.ui.workbench.ACTIVE_TAB_BG_END=248,248,248
 org.eclipse.ui.workbench.ACTIVE_TAB_BG_START=248,248,248
 org.eclipse.ui.workbench.INACTIVE_TAB_BG_END=248,248,248
 org.eclipse.ui.workbench.INACTIVE_TAB_BG_START=248,248,248
-org.eclipse.ui.workbench.TREE_TABLE_FONT=1|\uB9D1\uC740 \uACE0\uB515|15.75|0|WINDOWS|1|-21|0|0|0|400|0|0|0|-127|3|2|1|50|\uB9D1\uC740 \uACE0\uB515;
+org.eclipse.ui.workbench.TREE_TABLE_FONT=1|\uB9D1\uC740 \uACE0\uB515|20.25|0|WINDOWS|1|-27|0|0|0|400|0|0|0|-127|3|2|1|50|\uB9D1\uC740 \uACE0\uB515;
 org.eclipse.wst.sse.ui.textfont=1|Consolas|20.25|0|WINDOWS|1|-27|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
 terminal.views.view.font.definition=1|Consolas|20.25|0|WINDOWS|1|-27|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;

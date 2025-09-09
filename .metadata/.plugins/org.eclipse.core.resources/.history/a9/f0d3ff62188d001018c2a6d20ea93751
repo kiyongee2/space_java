@@ -1,0 +1,15 @@
+package classes.arrays;
+
+public class ArrayTest2 {
+
+	public static void main(String[] args) {
+		//배열의 크기가 4인 정수형 배열 선언
+		int[] number = new int[4];
+		
+		//출력
+		for(int i = 0; i < number.length; i++) {
+			System.out.println(number[i]);
+		}
+	}
+
+}
