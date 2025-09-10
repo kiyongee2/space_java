@@ -1,0 +1,21 @@
+package classes2.inheritance.car;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		EV myEV = new EV("kia", "EV6", 50);
+		
+		//출력(테스트 전)
+		myEV.showInfo();
+		
+		//기능 테스트
+		myEV.accelerate(60);
+		myEV.brake(30);
+		
+		//출력(테스트 후)
+		myEV.showInfo();
+
+	}
+
+}

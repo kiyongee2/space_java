@@ -1,0 +1,13 @@
+package classes2.constant;
+
+public class SeasonTest {
+
+	public static void main(String[] args) {
+		
+		Season season = Season.여름;
+		
+		System.out.println(season);
+
+	}
+
+}

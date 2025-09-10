@@ -1,0 +1,20 @@
+package classes2.inheritance.car;
+
+/*
+    상속 받기
+    - 클래스 이름 extends 상속하는 클래스
+    - 생성자 상속 : super(변수1, 변수2) 사용
+ * 
+ */
+public class EV extends Car{
+	private int battery;  //배터리 잔량(0 ~ 100%)
+
+	//생성자
+	public EV(String brand, String model, int battery) {
+		super(brand, model);
+		this.battery = battery;
+	}
+	
+	//EV 정보 출력 - 메서드 재정의(오버라이드-override)
+	//public void showInfo() {}
+}
