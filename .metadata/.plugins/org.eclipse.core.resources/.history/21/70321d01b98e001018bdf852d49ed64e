@@ -1,0 +1,13 @@
+package basic.object;
+
+public class ToStringTest {
+
+	public static void main(String[] args) {
+		// Book 인스턴스 생성
+		Book book = new Book(101, "채식주의자");
+		
+		System.out.println(book);
+
+	}
+
+}

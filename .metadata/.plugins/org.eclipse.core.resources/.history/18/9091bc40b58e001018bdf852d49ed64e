@@ -1,0 +1,22 @@
+package classes2.polymorphism.fruit;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("1.포도 | 2.복숭아 | 3.바나나");
+		System.out.print("선택> ");
+		
+		int menu = scan.nextInt();
+		
+		
+		
+		scan.close();
+
+	}
+
+}

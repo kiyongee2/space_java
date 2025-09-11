@@ -1,0 +1,14 @@
+package basic.string;
+
+public class StringMethodTest2 {
+
+	public static void main(String[] args) {
+		// replace(변경전문자, 변경후문자)
+		String str1 = "Hello Java!";
+		
+		String result1 = str1.replace('a', '@');
+		System.out.println(result1);
+
+	}
+
+}

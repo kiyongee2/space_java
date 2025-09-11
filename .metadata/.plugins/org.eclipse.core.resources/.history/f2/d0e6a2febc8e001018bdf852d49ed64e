@@ -1,0 +1,16 @@
+package basic.string;
+
+public class StringMethodTest1 {
+
+	public static void main(String[] args) {
+		//문자열은 1차원 배열이다.
+		// charAt(인덱스) : 매개값으로 주어진 인덱스를 문자로 리턴함
+		String msg = "행운을 빌어요!";
+		
+		System.out.println(msg.charAt(0)); //행
+		System.out.println(msg.charAt(1)); //운
+		
+
+	}
+
+}

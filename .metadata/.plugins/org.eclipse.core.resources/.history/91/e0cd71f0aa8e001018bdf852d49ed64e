@@ -1,0 +1,9 @@
+package classes2.drink;
+
+public class Alcohol extends Drink{
+
+	public Alcohol(String name, int price, int quantity) {
+		super(name, price, quantity);
+	}
+
+}

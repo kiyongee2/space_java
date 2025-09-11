@@ -1,0 +1,39 @@
+package classes2.polymorphism;
+
+class Animal{
+	public void move() {
+		System.out.println("동물이 움직입니다.");
+	}
+}
+
+//Animal을 상속한 Human 클래스
+class Human extends Animal{
+
+	@Override
+	public void move() { //재정의
+		System.out.println("사람이 두 발로 걷습니다.");
+	}
+}
+
+class Horse extends Animal{
+
+	@Override
+	public void move() {
+		System.out.println("말이 네 발로 뜁니다.");
+	}
+}
+
+public class AnimalTest {
+
+	public static void main(String[] args) {
+		
+		//Human human = new Human();
+		//human.move();
+		
+		//다형성을 사용한 인스턴스 생성
+		//부모형으로 인스턴스 생성
+		Animal human = new Human();
+		human.move();
+	}
+
+}

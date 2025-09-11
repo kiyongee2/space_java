@@ -22,13 +22,20 @@ public class EV extends Car{
 			battery = 100;  //최대 제한
 		System.out.println(model + " 충전됨 - 배터리: " + "%");
 	}
+
+	//메서드 재정의 - 메서드의 내용을 부모클래스와 다르게 변경하는 것
+	@Override
+	public void showInfo() {
+		super.showInfo();
+		System.out.println("배터리 잔량: " + battery + "%");
+	}
 	
 	//EV 정보 출력 - 메서드 재정의(오버라이드-override)
-	@Override
+	/*@Override
 	public void showInfo() {
 		super.showInfo(); //부모 메서드 상속
 		System.out.println("배터리 잔량: " + battery + "%");
-	}
+	}*/
 }
 
 
