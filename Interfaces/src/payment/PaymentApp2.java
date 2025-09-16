@@ -14,8 +14,8 @@ public class PaymentApp2 {
 		Payment kakao = new KakaoPayPayment();
 		
 		// 결제 실행
-		service.processPayment(card, 10000);
-		service.processPayment(kakao, 5000);
+		service.processPayment(card, 20000);
+		service.processPayment(kakao, 10000);
 	}
 
 }
