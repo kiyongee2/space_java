@@ -4,5 +4,10 @@
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="interfaces.calculator.MyCalculator"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="interfaces.remotecontrol.RemoteControl"/>
+    <fullyQualifiedTypeName name="interfaces.smart_tv.WebSearchable"/>
+    <fullyQualifiedTypeName name="lambda.MyFuncInterface"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
 </qualifiedTypeNameHistroy>

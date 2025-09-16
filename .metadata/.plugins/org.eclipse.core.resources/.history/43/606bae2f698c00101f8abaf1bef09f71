@@ -1,9 +1,0 @@
-package classes.score2;
-
-/*
-    - 배열 자료구조 사용
-    - 과목 추가함수 : addSubject() 정의
- */
-public class Student {
-
-}

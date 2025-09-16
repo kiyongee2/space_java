@@ -1,8 +1,0 @@
-package classes;
-
-//은행 계좌 클래스 정의
-public class BankAccount {
-	private String ano;   //계좌 번호
-	private String owner; //예금주
-	private int balance;  //잔액
-}
