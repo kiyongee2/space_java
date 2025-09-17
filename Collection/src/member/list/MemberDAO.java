@@ -8,7 +8,6 @@ import member.Member;
     DAO(Data Access Object) 클래스 
     - 자료형(DTO, Member)을 사용해서 삽입, 검색, 삭제하는 클래스
 */
-
 public class MemberDAO {
 	//Member를 저장할 ArrayList 객체 선언(생성)
 	private ArrayList<Member> arrayList;
@@ -29,6 +28,21 @@ public class MemberDAO {
 			Member member = arrayList.get(i);
 			System.out.println(member);
 		}
+	}
+	
+	//회원 삭제 - 회원 아이디를 매개로 삭제
+	public boolean removeMember(int memberId) {
+		for(int i = 0; i < arrayList.size(); i++) {
+			//이미 등록된 아이디와 외부에서 입력한 아이디와 비교
+			int dbId = arrayList.get(i).getMemberId();
+			if(dbId == memberId) { //일치하면 삭제
+				arrayList.remove(i);
+				return true;
+			}
+		}
+		
+		System.out.println(memberId + "번 아이디가 존재하지 않습니다.");
+		return false;
 	}
 }
 
