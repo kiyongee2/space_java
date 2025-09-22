@@ -20,29 +20,34 @@ public class Main {
 			System.out.println("=============================================");
 			System.out.print("선택> ");
 			
-			//선택한 번호(문자열) ->  정수로 변환
-			int choice = Integer.parseInt(scan.nextLine());
-			switch(choice) {
-			case 1:
-				createAccount();
-				break;
-			case 2:
-				deposit();
-				break;
-			case 3:
-				withdraw();
-				break;
-			case 4:
-				selectAccount();
-				break;
-			case 5:
-				System.out.println("프로그램을 종료합니다.");
-				run = false; //상태 바꿈
-				break;  //사용가능: return;
-			default:
-				System.out.println("지원되지 않는 기능입니다.");
+			try {
+				//선택한 번호(문자열) ->  정수로 변환
+				int choice = Integer.parseInt(scan.nextLine());
+				switch(choice) {
+				case 1:
+					createAccount();
+					break;
+				case 2:
+					deposit();
+					break;
+				case 3:
+					withdraw();
+					break;
+				case 4:
+					selectAccount();
+					break;
+				case 5:
+					System.out.println("프로그램을 종료합니다.");
+					run = false; //상태 바꿈
+					break;  //사용가능: return;
+				default:
+					System.out.println("지원되지 않는 기능입니다.");
+				}
+			}catch(NumberFormatException e) {
+				System.out.println("유효한 숫자를 입력하세요.");
 			}
-		}
+		}//while 닫기
+		scan.close();
 	}
 
 	//계좌 검색
@@ -58,7 +63,6 @@ public class Main {
 				//계좌 정보, 거래 내역 메서드 호출
 				account.displayInfo();
 				account.getTransactionHistory();
-				
 				break;
 			}else {
 				System.out.println("계좌가 없습니다. 다시 입력하세요");
@@ -86,6 +90,8 @@ public class Main {
 				account.setBalance(account.getBalance() - amount);
 				System.out.println("입금이 정상 처리되었습니다. 현재 잔액: " + 
 													account.getBalance());
+				//거래 추가 메서드 호출
+				account.addTransaction(TransactionType.출금, amount);
 			}
 		}else {
 			System.out.println("계좌가 없습니다.");
@@ -111,6 +117,8 @@ public class Main {
 				account.setBalance(account.getBalance() + amount);
 				System.out.println("입금이 정상 처리되었습니다. 현재 잔액: " + 
 													account.getBalance());
+				//거래 추가 메서드 호출
+				account.addTransaction(TransactionType.입금, amount);
 			}
 		}else {
 			System.out.println("계좌가 없습니다.");
@@ -135,26 +143,27 @@ public class Main {
 	//계좌 생성
 	private static void createAccount() {
 		
-		try {
-			System.out.print("계좌번호 입력: ");
-			String accNum = scan.nextLine();
-			
-			System.out.print("계좌주 입력: ");
-			String name = scan.nextLine();
-			
-			//신규 계좌 생성
-			BankAccount newAccount = new BankAccount(accNum, name);
-			//list에 저장
-			accountList.add(newAccount);
-			System.out.println("계좌가 생성되었습니다.(계좌번호: " + accNum + ")");
-		}catch(IllegalArgumentException e) {
-			System.out.println(e.getMessage());
+		while(true) {
+			try {
+				System.out.print("계좌번호 입력: ");
+				String accNum = scan.nextLine();
+				
+				if(searchAccount(accNum) != null) {
+					System.out.println("이미 등록된 계좌입니다. 다른 계좌를 입력하세요");
+				}else {
+					System.out.print("계좌주 입력: ");
+					String name = scan.nextLine();
+					
+					//신규 계좌 생성
+					BankAccount newAccount = new BankAccount(accNum, name);
+					//list에 저장
+					accountList.add(newAccount);
+					System.out.println("계좌가 생성되었습니다.(계좌번호: " + accNum + ")");
+					break;
+				}
+			}catch(IllegalArgumentException e) {
+				System.out.println(e.getMessage());
+			}
 		}
 	}
-	
-	
-	
-	
-	
-
 }

@@ -88,7 +88,8 @@ public class BankAccount {
 		
 		for(Transaction transaction : transactions) {
 			String typeStr = (transaction.type == TransactionType.입금) ? "입금" : "출금";
-			System.out.println(" | " + typeStr + " | " + transaction.amount + "원");
+			System.out.println("[" + transaction.getFormattedTimestamp() + "]" + 
+					" | " + typeStr + " | " + transaction.amount + "원");
 		}
 	}
 }
