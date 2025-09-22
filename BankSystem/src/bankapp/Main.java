@@ -47,14 +47,49 @@ public class Main {
 
 	//계좌 검색
 	private static void selectAccount() {
-		// TODO Auto-generated method stub
 		
+		while(true) {
+			System.out.print("계좌번호 입력: ");
+			String accNum = scan.nextLine();
+			
+			if(searchAccount(accNum) != null) {
+				BankAccount account = searchAccount(accNum);
+				
+				//계좌 정보, 거래 내역 메서드 호출
+				account.displayInfo();
+				account.getTransactionHistory();
+				
+				break;
+			}else {
+				System.out.println("계좌가 없습니다. 다시 입력하세요");
+			}
+		}
 	}
 
 	//출금
 	private static void withdraw() {
-		// TODO Auto-generated method stub
+		System.out.print("계좌번호 입력: ");
+		String accNum = scan.nextLine();
 		
+		if(searchAccount(accNum) != null) { //입력한 계좌번호로 계좌를 찾았다면
+			BankAccount account = searchAccount(accNum);
+			
+			System.out.print("출금액 입력: ");
+			int amount = Integer.parseInt(scan.nextLine());
+			
+			if(amount < 0) {
+				System.out.println("유효한 금액을 입력하세요.");
+			}else if(amount > account.getBalance()) {
+				System.out.println("잔액이 부족합니다.");
+			}else {
+				//출금 처리
+				account.setBalance(account.getBalance() - amount);
+				System.out.println("입금이 정상 처리되었습니다. 현재 잔액: " + 
+													account.getBalance());
+			}
+		}else {
+			System.out.println("계좌가 없습니다.");
+		}
 	}
 
 	//예금

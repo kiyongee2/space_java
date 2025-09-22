@@ -62,6 +62,35 @@ public class BankAccount {
 	public void setTransactions(List<Transaction> transactions) {
 		this.transactions = transactions;
 	}
+	
+	//계좌 정보 출력
+	public void displayInfo() {
+		System.out.println("계좌 정보");
+		System.out.println("    계좌 번호: " + accountNumber);
+		System.out.println("    계좌주: " + owner);
+		System.out.println("    잔고: " + balance);
+	}
+	
+	//거래 추가
+	public void addTransaction(TransactionType type, int amount) {
+		//거래 1건 생성
+		Transaction transaction = new Transaction(type, amount);
+		//트랜잭션 리스트에 1건 저장
+		transactions.add(transaction);
+	}
+	
+	//거래 내역 조회
+	public void getTransactionHistory() {
+		if(transactions.isEmpty()) {
+			System.out.println("거래 내역이 없습니다.");
+			return;  //즉시 종료
+		}
+		
+		for(Transaction transaction : transactions) {
+			String typeStr = (transaction.type == TransactionType.입금) ? "입금" : "출금";
+			System.out.println(" | " + typeStr + " | " + transaction.amount + "원");
+		}
+	}
 }
 
 
