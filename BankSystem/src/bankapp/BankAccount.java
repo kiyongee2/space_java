@@ -8,7 +8,7 @@ public class BankAccount {
 	private String accountNumber;  //계좌 번호
 	private String owner;  //예금주
 	private int balance;   //잔고
-	List<Transaction> transactions; //거래 
+	private List<Transaction> transactions; //거래 
 	
 	//계좌번호 유효성 검사
 	private static final String ACCOUNT_PATTERN = 
@@ -26,7 +26,48 @@ public class BankAccount {
 	}
 
 	//계좌번호 일치 여부 확인 메서드
-	private boolean isValidAccountNumber(String accountNumber2) {
+	private boolean isValidAccountNumber(String accountNumber) {
 		return Pattern.matches(ACCOUNT_PATTERN, accountNumber);
 	}
+
+	//getter, setter
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public String getOwner() {
+		return owner;
+	}
+
+	public void setOwner(String owner) {
+		this.owner = owner;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+
+	public List<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	public void setTransactions(List<Transaction> transactions) {
+		this.transactions = transactions;
+	}
 }
+
+
+
+
+
+
+
+
